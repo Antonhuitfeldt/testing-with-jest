@@ -34,3 +34,18 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
+
+describe('Clicking "Pusha till stacken"', () => {
+    it('should update the visible stack size', async () => {
+        let pop = await driver.findElement(By.id('pop'));
+        await pop.click();
+
+        let popAlert = await driver.switchTo().alert();
+        await popAlert.accept();
+
+        let sizeElement = await driver.findElement(By.id('stack_size'));
+        let size = await sizeElement.getText();
+
+        expect(size).toEqual("1");
+    });
+});
