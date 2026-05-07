@@ -22,5 +22,5 @@ test('size returns number of items in stack', () => {
     stack.pop();
     stack.push("Tjena");
 
-    expect(stack.size()).toBe(3)
+    expect(stack.size()).toBe(4)
 });

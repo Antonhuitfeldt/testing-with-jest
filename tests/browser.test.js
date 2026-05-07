@@ -35,7 +35,7 @@ describe('Clicking "Pusha till stacken"', () => {
     });
 });
 
-describe('Clicking "Pusha till stacken"', () => {
+describe('Clicking "Poppa stacken!"', () => {
     it('should update the visible stack size', async () => {
         let pop = await driver.findElement(By.id('pop'));
         await pop.click();
@@ -46,6 +46,6 @@ describe('Clicking "Pusha till stacken"', () => {
         let sizeElement = await driver.findElement(By.id('stack_size'));
         let size = await sizeElement.getText();
 
-        expect(size).toEqual("1");
+        expect(size).toEqual("0");
     });
 });
